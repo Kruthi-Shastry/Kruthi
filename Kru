@@ -1,0 +1,28 @@
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class Exp11 {
+    public static void main(String[] args) throws IOException, ParseException {
+
+        JSONParser jsonparser = new JSONParser();
+        FileReader filereader = new FileReader("./jsonfile/emp.json");
+
+        Object obj = jsonparser.parse(filereader);
+
+        JSONObject empobj = (JSONObject) obj;
+
+        String fname = (String) empobj.get("firstname");
+        String lname = (String) empobj.get("lastname");
+
+        System.out.println("First name: " + fname);
+    }
+}
+
+{
+    "firstname": "Kruthi",
+    "lastname": "Shastry"
+}
