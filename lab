@@ -1,0 +1,12 @@
+1
+FROM python
+WORKDIR /app
+COPY . /app
+CMD ["python", "sample.py"]
+
+docker build -t test_1
+docker run --name cont1 test_1
+docker image tag paste kruthishastrymd/test_1
+docker push kruthishastrymd/test_1:latest
+
+2
