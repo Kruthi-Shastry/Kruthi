@@ -76,5 +76,30 @@ pipeline
 }
 then build
 
+3
+slack
+vvce
+create channel
+devops_upd
+jenkins
+plugins
+slack notification
+system
+slack
+workspace:vvcefroup
+my.slack.com/services/new/jenkins-ci
+select channel
+add jenkins
+copy secret text
+credentials add secret text
+default channel
+new item
+jenkins freestyle project
+build step execute win
+java --version
+add post build action
+slack notifications
+build
+
 
 
